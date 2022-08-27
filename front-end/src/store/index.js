@@ -9,7 +9,7 @@ export default createStore({
 
   },
   mutations: {
-    StoreTodos(state, payload) {
+    storeTodos(state, payload) {
       state.todos = payload
     },
 
@@ -21,6 +21,7 @@ export default createStore({
         state.todos.push(payload)
       }
     },
+
     deleteTodo(state, id) {
       const index = state.todos.findIndex(todo => todo.id === id)
 
@@ -28,24 +29,29 @@ export default createStore({
         state.todos.splice(index, 1)
       }
     },
-
   },
   actions: {
     getTodos({
       commit
     }) {
       return axios.get('http://127.0.0.1:8000/api')
-        .then(response => commit('StoreTodos',response.data))
+        .then(response => commit('storeTodos',response.data))
     },
     addTodo({ commit }, data) {
      return axios.post('http://127.0.0.1:8000/api/task', data)
-        .then(response => commit('StoreTodo', response.data))
+        .then(response => commit('storeTodo', response.data))
     },
-    updateTodo(c,{id,data}){
-      return axios.put(`http://127.0.0.1:8000/api/task/${id}`,data)
+    updateTodo({ commit }, { id, data }) {
+      return axios.put(`http://127.0.0.1:8000/api/task/${id}`, data)
+        .then((response) => {
+          commit('storeTodo', response.data)
+        })
     },
-    updateStatusTodo(c,{id,data}){
-      return axios.put(`http://127.0.0.1:8000/api/task/status/${id}`,data)
+    updateStatusTodo({ commit }, { id, data }) {
+      return axios.put(`http://127.0.0.1:8000/api/task/status/${id}`, data)
+        .then((response) => {
+          commit('storeTodo', response.data)
+        })
     },
     destroyTodo({ commit },id){
       return axios.delete(`http://127.0.0.1:8000/api/task/${id}`)
