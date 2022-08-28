@@ -143,7 +143,7 @@ $ php artisan serve
 ### Post
 
 ```json
-/* Envio */
+// Envio 
 {
   "title":"Tarefa 3"
 }
