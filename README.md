@@ -1,11 +1,9 @@
 <h1 align="center">
   <span>To-do</span>
-    <img alt="" title="" src="" />
 </h1>
 
 <h4 align="center"> 
-  <!--   Status do projeto -->
-	🚧 Em construção  🚧
+  🚧 Em construção  🚧
 </h4>
 
 ## 📋 Sobre o projeto
@@ -145,7 +143,7 @@ $ php artisan serve
 ### Post
 
 ```json
-// Envio
+/* Envio */
 {
   "title":"Tarefa 3"
 }
@@ -226,4 +224,6 @@ $ php artisan serve
 [![codepen](https://img.shields.io/badge/codepen-111?style=for-the-badge&logo=codepen&logoColor=white)](https://codepen.io/BiahDev)
 [![linkedin](https://img.shields.io/badge/linkedin-111?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/biahdev)
 [![twitter](https://img.shields.io/badge/twitter-111?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/BiahDev)
-`<a href="mailto:bia8717@hotmail.com"><img src="https://img.shields.io/badge/Email-111?style=for-the-badge&logo=gmail&logoColor=white" />``</a>`
+<a href="mailto:bia8717@hotmail.com">
+  <img src="https://img.shields.io/badge/Email-111?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
