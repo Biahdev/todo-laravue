@@ -39,18 +39,18 @@ export default createStore({
     },
     addTodo({ commit }, data) {
      return axios.post('http://127.0.0.1:8000/api/task', data)
-        .then(response => commit('storeTodo', response.data))
+        .then(response => commit('storeTodo', response.data.data))
     },
     updateTodo({ commit }, { id, data }) {
       return axios.put(`http://127.0.0.1:8000/api/task/${id}`, data)
         .then((response) => {
-          commit('storeTodo', response.data)
+          commit('storeTodo', response.data.data)
         })
     },
     updateStatusTodo({ commit }, { id, data }) {
       return axios.put(`http://127.0.0.1:8000/api/task/status/${id}`, data)
         .then((response) => {
-          commit('storeTodo', response.data)
+          commit('storeTodo', response.data.data)
         })
     },
     destroyTodo({ commit },id){

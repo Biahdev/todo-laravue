@@ -30,8 +30,8 @@ export default {
   },
   data() {
     return {
-      title: this.todo.data.title,
-      isCompleted: this.todo.data.completed
+      title: this.todo.title,
+      isCompleted: this.todo.completed
     }
   },
   methods: {
@@ -40,7 +40,7 @@ export default {
         return false;
       }
       const payload = {
-        id: this.todo.data.id,
+        id: this.todo.id,
         data: {
           title: this.title
         }
@@ -49,7 +49,7 @@ export default {
     },
     onCheckClick() {
       const payload = {
-        id: this.todo.data.id,
+        id: this.todo.id,
         data: {
           completed: this.isCompleted = !this.isCompleted
         }
@@ -57,7 +57,7 @@ export default {
       this.$store.dispatch('updateStatusTodo', payload)
     },
     onDestroy() {
-      this.$store.dispatch('destroyTodo', this.todo.data.id)
+      this.$store.dispatch('destroyTodo', this.todo.id)
     }
   }
 }
