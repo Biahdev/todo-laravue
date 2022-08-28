@@ -65,7 +65,7 @@ class TaskController extends Controller
         'completed' => !is_null($request['completed']) ? $request['completed'] :$task->completed
       ]);
 
-      return $this->messageJson("Tarefa atualizada com sucesso com sucesso!", 202,$task);
+      return $this->messageJson("Tarefa atualizada com sucesso !", 202,$task);
       }
       catch (QueryException $e) {
         return $this->messageJson("Houve algum erro!", 400, $e);
