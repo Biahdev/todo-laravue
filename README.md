@@ -8,7 +8,7 @@
 
 ## 📋 Sobre o projeto
 
-To-do - É um sistema de gestão de tarefas simples e eficiente feito com Vue.js, Vuex e Laravel com ApiRest.O front foi feito junto ao curso do Tiago Matos.
+To-do - É um sistema de gestão de tarefas simples e eficiente feito com Vue.js, Vuex e Laravel com ApiRest. O front foi feito junto ao curso do Tiago Matos.
 
 ## 🗺 Roadmap
 
