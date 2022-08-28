@@ -10,21 +10,19 @@
 
 ## 📋 Sobre o projeto
 
-To-do - É um sistema de gestão de tarefas simples e eficiente feito com Vue.js e Laravel com ApiRest.
+To-do - É um sistema de gestão de tarefas simples e eficiente feito com Vue.js, Vuex e Laravel com ApiRest.O front foi feito junto ao curso do Tiago Matos.
 
-<!-- ## 🖥️ Demo -->
-
-## 💫 Roadmap
+## 🗺 Roadmap
 
 ### Front-end
 
 - [X] Setup básico de pastas
-- [ ] Crud das tarefas
-  - [ ] Criar uma tarefa
-  - [ ] Editar uma tarefa
-  - [ ] Excluir uma tarefa
-  - [ ] Listar tarefas
-  - [ ] Trocar o status para tarefa concluida
+- [X] Crud das tarefas
+  - [X] Criar uma tarefa
+  - [X] Editar uma tarefa
+  - [X] Excluir uma tarefa
+  - [X] Listar tarefas
+  - [X] Trocar o status para tarefa concluida
 
 ### Back-end
 
@@ -43,31 +41,55 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ### Front-end
 
 - Vue.js
+- Vuex
+- Tailwind CSS
 
 ### Back-end
 
-- PHP 7.4
-- Laravel 8
+- PHP 8.1
+- Laravel 9
 - MySql 8
 
 ### Utilitários
 
 - Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**
 - BD: MySqlWorkBench
+- API Client : [Insonia](https://insomnia.rest/)
 
-<!-- ## 🛠 Como executar o projeto
+## 🛠 Como executar o projeto
 
 Este projeto é divido em Duas partes:
+
 1. Frontend
 2. Backend
 
-
 ### Pré-requisitos
+
 - Node.js
 - NPM
-- PHP 7.x
-- MySQL
+- PHP 8.x
+- MySQL 8
+- Composer
 
+### Rodando o front-end
+
+```bash
+
+# Clone este repositório
+$ git clone 
+
+# Vá para a pasta back-end
+$ cd front-end
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev
+
+#click no link do servidor que foi gerado
+
+```
 
 ### Rodando o Backend (servidor)
 
@@ -86,11 +108,115 @@ $ composer install
 $ php artisan serve
 
 #click no link do servidor que foi gerado
+```
+
+## 🌐 End points da API
+
+| Método    | URL                 | Descrição                     |
+| ---------- | ------------------- | ------------------------------- |
+| `GET`    | api/                | Listar as tarefas               |
+| `POST`   | api/task            | Criar uma nova tarefa           |
+| `UPDATE` | api/task/:id        | Atualizar o titulo da tarefa    |
+| `UPDATE` | api/task/status/:id | Atualizar o status dessa tarefa |
+| `DELETE` | api/task/:id        | Deletar uma tarefa              |
+
+### Get
+
+```json
+// Retorno
+[
+  {
+    "id": 1,
+    "title": "Tarefa 1",
+    "completed": 0,
+    "created_at": "2022-08-27T23:56:39.000000Z",
+    "updated_at": "2022-08-27T23:56:39.000000Z"
+  },
+  {
+    "id": 2,
+    "title": "Tarefa 2",
+    "completed": 0,
+    "created_at": "2022-08-27T23:56:39.000000Z",
+    "updated_at": "2022-08-27T23:56:39.000000Z"
+  }
+]
+```
+
+### Post
+
+```json
+// Envio
+{
+  "title":"Tarefa 3"
+}
+
+// Retorno
+{
+  "title": "Tarefa 3",
+  "completed": false,
+  "updated_at": "2022-08-28T02:50:23.000000Z",
+  "created_at": "2022-08-28T02:50:23.000000Z",
+  "id": 13,
+  "message": "Tarefa criada com sucesso!",
+  "httpCode": 202
+}
+```
+
+### Update
+
+```json
+// Envio
+{
+  "title":"Tarefa Update"
+}
+
+// Retorno
+{
+  "id": 1,
+  "title": "Tarefa Update",
+  "completed": false,
+  "created_at": "2022-08-27T23:56:39.000000Z",
+  "updated_at": "2022-08-28T02:55:26.000000Z",
+  "message": "Tarefa atualizada com sucesso com sucesso!",
+  "httpCode": 202
+}
 
 ```
 
----
- -->
+### Update Status
+
+```json
+// Envio
+{
+  "completed":true
+}
+
+// Retorno
+{
+  "id": 1,
+  "title": "Tarefa Update",
+  "completed": true,
+  "created_at": "2022-08-27T23:56:39.000000Z",
+  "updated_at": "2022-08-28T02:55:26.000000Z",
+  "message": "Tarefa atualizada com sucesso com sucesso!",
+  "httpCode": 202
+}
+```
+
+### Delete
+
+```json
+// Retorno
+{
+  "id": 9,
+  "title": "Tarefa Update",
+  "completed": 1,
+  "created_at": "2022-08-27T23:56:39.000000Z",
+  "updated_at": "2022-08-28T02:58:41.000000Z",
+  "message": "Tarefa deletada com sucesso!",
+  "httpCode": 202
+}
+```
 
 ## 🦸 Autora
 
