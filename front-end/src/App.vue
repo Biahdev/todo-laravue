@@ -1,5 +1,5 @@
 <template>
-  <div class="px-3 py-8 md:px-10 flex justify-center items-center min-h-screen">
+  <div class="px-3 py-16 md:px-10 flex justify-center  min-h-screen">
     <div class="w-full sm:w-1/2 lg:w-1/3 mx-auto">
       <div class="h-auto w-full bg-zinc-900 rounded-lg p-5">
         <TodoSpinner v-if="loading" />
