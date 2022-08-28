@@ -1,20 +1,26 @@
 <template>
-  <form class="flex items-center px-4 bg-gray-900 h-15 rounded-sm border-l-2 border-green-400 mb-3"
-    @submit.stop.prevent="addTodo">
-
-    <input placeholder="Adicione um novo item ..." type="text" v-model="title"
-      class="bg-gray-900 placeholder-gray-500 text-gray-500 font-light focus:outline-none block w-full appearance-none leading-normal py-3 pr-3">
-
-    <button class="text-green-400 text-xs font-semibold focus:outline-none" type="submit">
-      ADICIONAR
-    </button>
-  </form>
+  <div class="mt-4">
+    <form @submit.stop.prevent="addTodo">
+      <div class="flex gap-2">
+        <div class="w-full h-16 bg-zinc-800 rounded-[7px] flex justify-between items-center px-3">
+          <div class="flex justify-between items-center">
+            <input placeholder="Adicione um novo item ..." type="text" v-model="title"
+              class="placeholder:font-semibold bg-zinc-800 placeholder-zinc-600 text-zinc-300 focus:outline-none block w-full appearance-none leading-normal" />
+          </div>
+          <div>
+            <button type="submit">
+              <i class="fa-solid fa-circle-plus text-2xl text-purple-500 "></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
 </template>
 
 <script>
-
-
 export default {
+  name: 'TodoFormAdd',
   data() {
     return {
       title: ''

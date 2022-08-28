@@ -18,7 +18,7 @@ export default createStore({
       if (index >= 0) {
         state.todos.splice(index, 1, payload)
       } else {
-        state.todos.push(payload)
+        state.todos.unshift(payload)
       }
     },
 

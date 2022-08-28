@@ -13,7 +13,7 @@ class TaskController extends Controller
   {
     $tasks = Task::all();
     if (empty($tasks) || $tasks == '[]') {
-      return response()->json("Nenhuma tarefa criada", 400);
+      return $this->messageJson("Nenhuma tarefa criada", 400);
     }
     return response()->json($tasks, 200);
   }
@@ -89,17 +89,16 @@ class TaskController extends Controller
     }
   }
 
-  public function messageJson($message, $httpCode, $obj = '')
+  public function messageJson($message, $httpCode, $obj = false)
   {
-    if (empty($obj)) {
+    if (!$obj) {
       $array = ['message' => $message, 'httpCode' => $httpCode];
       return response()->json($array);
     }
-    $array = array_merge(
-      json_decode(json_encode($obj), true),
-    ['message' => $message, 'httpCode' => $httpCode]
-    );
-
-    return response()->json($array);
+    return response()->json([
+      'data'=> $obj,
+      'message' => $message, 
+      'httpCode' => $httpCode
+    ]);
   }
 }
