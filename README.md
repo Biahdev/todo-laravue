@@ -2,13 +2,11 @@
   <span>To-do</span>
 </h1>
 
-<h4 align="center"> 
-  🚧 Em construção  🚧
-</h4>
+<img align="right" src="https://raw.githubusercontent.com/BiahDev/todo-laravue/main/demo.gif" width="37%"/>
 
 ## 📋 Sobre o projeto
 
-To-do - É um sistema de gestão de tarefas simples e eficiente feito com Vue.js, Vuex e Laravel com ApiRest. O front foi feito junto ao curso do Tiago Matos.
+To-do - É um sistema de gestão de tarefas simples e eficiente feito com Vue.js, Vuex e Laravel com ApiRest. 
 
 ## 🗺 Roadmap
 
@@ -121,7 +119,7 @@ $ php artisan serve
 ### Get
 
 ```json
-// Retorno
+"Retorno"
 [
   {
     "id": 1,
@@ -143,12 +141,12 @@ $ php artisan serve
 ### Post
 
 ```json
-// Envio 
+"Envio" 
 {
   "title":"Tarefa 3"
 }
 
-// Retorno
+"Retorno"
 {
   "title": "Tarefa 3",
   "completed": false,
@@ -163,12 +161,12 @@ $ php artisan serve
 ### Update
 
 ```json
-// Envio
+"Envio"
 {
   "title":"Tarefa Update"
 }
 
-// Retorno
+"Retorno"
 {
   "id": 1,
   "title": "Tarefa Update",
@@ -184,12 +182,12 @@ $ php artisan serve
 ### Update Status
 
 ```json
-// Envio
+"Envio"
 {
   "completed":true
 }
 
-// Retorno
+"Retorno"
 {
   "id": 1,
   "title": "Tarefa Update",
@@ -204,7 +202,7 @@ $ php artisan serve
 ### Delete
 
 ```json
-// Retorno
+"Retorno"
 {
   "id": 9,
   "title": "Tarefa Update",
