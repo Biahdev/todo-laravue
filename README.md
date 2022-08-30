@@ -129,14 +129,14 @@ $ php artisan serve
   {
     "id": 1,
     "title": "Tarefa 1",
-    "completed": true,
+    "completed": false,
     "created_at": "2022-08-27T23:56:39.000000Z",
     "updated_at": "2022-08-27T23:56:39.000000Z"
   },
   {
     "id": 2,
     "title": "Tarefa 2",
-    "completed": false,
+    "completed": true,
     "created_at": "2022-08-27T23:56:39.000000Z",
     "updated_at": "2022-08-27T23:56:39.000000Z"
   }
