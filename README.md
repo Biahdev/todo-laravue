@@ -154,8 +154,8 @@ $ php artisan serve
 "Retorno"
 {
  "data": {
-    "id": 1,
-    "title": "Tarefa  4",
+    "id": 3,
+    "title": "Tarefa  3",
     "completed": false,
     "created_at": "2022-08-28T23:44:58.000000Z",
     "updated_at": "2022-08-30T18:47:21.000000Z"
@@ -213,8 +213,8 @@ $ php artisan serve
 "Retorno"
 {
  "data": {
-    "id": 2,
-    "title": "Tarefa 2s",
+    "id": 3,
+    "title": "Tarefa 3",
     "completed": false,
     "created_at": "2022-08-28T23:44:58.000000Z",
     "updated_at": "2022-08-30T18:47:21.000000Z"
