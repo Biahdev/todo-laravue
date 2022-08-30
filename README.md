@@ -153,12 +153,13 @@ $ php artisan serve
 
 "Retorno"
 {
-  "title": "Tarefa 2",
+  "title": "Tarefa 3",
   "completed": false,
   "updated_at": "2022-08-28T02:50:23.000000Z",
   "created_at": "2022-08-28T02:50:23.000000Z",
-  "id": 2,
+  "id": 13,
   "message": "Tarefa criada com sucesso!",
+  "httpCode": 202
 }
 ```
 
@@ -229,6 +230,6 @@ $ php artisan serve
 [![codepen](https://img.shields.io/badge/codepen-111?style=for-the-badge&logo=codepen&logoColor=white)](https://codepen.io/BiahDev)
 [![linkedin](https://img.shields.io/badge/linkedin-111?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/biahdev)
 [![twitter](https://img.shields.io/badge/twitter-111?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/BiahDev)
-`<a href="mailto:bia8717@hotmail.com">`
-  `<img src="https://img.shields.io/badge/Email-111?style=for-the-badge&logo=gmail&logoColor=white" />`
-`</a>`
+<a href="mailto:bia8717@hotmail.com">
+  <img src="https://img.shields.io/badge/Email-111?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
