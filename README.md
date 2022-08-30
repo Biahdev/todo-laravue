@@ -154,7 +154,6 @@ $ php artisan serve
   "created_at": "2022-08-28T02:50:23.000000Z",
   "id": 13,
   "message": "Tarefa criada com sucesso!",
-  "httpCode": 202
 }
 ```
 
@@ -174,7 +173,6 @@ $ php artisan serve
   "created_at": "2022-08-27T23:56:39.000000Z",
   "updated_at": "2022-08-28T02:55:26.000000Z",
   "message": "Tarefa atualizada com sucesso com sucesso!",
-  "httpCode": 202
 }
 
 ```
@@ -195,7 +193,6 @@ $ php artisan serve
   "created_at": "2022-08-27T23:56:39.000000Z",
   "updated_at": "2022-08-28T02:55:26.000000Z",
   "message": "Tarefa atualizada com sucesso com sucesso!",
-  "httpCode": 202
 }
 ```
 
@@ -210,7 +207,6 @@ $ php artisan serve
   "created_at": "2022-08-27T23:56:39.000000Z",
   "updated_at": "2022-08-28T02:58:41.000000Z",
   "message": "Tarefa deletada com sucesso!",
-  "httpCode": 202
 }
 ```
 
