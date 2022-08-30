@@ -6,7 +6,7 @@
 
 ## 📋 Sobre o projeto
 
-To-do - É um sistema de gestão de tarefas simples e eficiente feito com Vue.js, Vuex e Laravel com ApiRest. 
+To-do - É um sistema de gestão de tarefas simples e eficiente feito com Vue.js, Vuex e Laravel com ApiRest.
 
 ## 🗺 Roadmap
 
@@ -100,6 +100,11 @@ $ cd back-end
 # Instale as dependências
 $ composer install
 
+# Crie uma base de dados chamado todo
+
+# Rode as migrations
+$ composer migration
+
 # Execute a aplicação em modo de desenvolvimento
 $ php artisan serve
 
@@ -108,13 +113,13 @@ $ php artisan serve
 
 ## 🌐 End points da API
 
-| Método    | URL                 | Descrição                     |
-| ---------- | ------------------- | ------------------------------- |
-| `GET`    | api/                | Listar as tarefas               |
-| `POST`   | api/task            | Criar uma nova tarefa           |
-| `UPDATE` | api/task/:id        | Atualizar o titulo da tarefa    |
-| `UPDATE` | api/task/status/:id | Atualizar o status dessa tarefa |
-| `DELETE` | api/task/:id        | Deletar uma tarefa              |
+| Método    | URL                 | Descrição                  |
+| ---------- | ------------------- | ---------------------------- |
+| `GET`    | api/                | Listar todas as  tarefas   |
+| `POST`   | api/task            | Criar uma nova tarefa        |
+| `PUT`    | api/task/title/:id  | Atualizar o titulo da tarefa |
+| `PUT`    | api/task/status/:id | Atualizar o status da tarefa |
+| `DELETE` | api/task/:id        | Deletar uma tarefa           |
 
 ### Get
 
@@ -124,14 +129,14 @@ $ php artisan serve
   {
     "id": 1,
     "title": "Tarefa 1",
-    "completed": 0,
+    "completed": true,
     "created_at": "2022-08-27T23:56:39.000000Z",
     "updated_at": "2022-08-27T23:56:39.000000Z"
   },
   {
     "id": 2,
     "title": "Tarefa 2",
-    "completed": 0,
+    "completed": false,
     "created_at": "2022-08-27T23:56:39.000000Z",
     "updated_at": "2022-08-27T23:56:39.000000Z"
   }
@@ -143,18 +148,17 @@ $ php artisan serve
 ```json
 "Envio" 
 {
-  "title":"Tarefa 3"
+  "title":"Tarefa 2"
 }
 
 "Retorno"
 {
-  "title": "Tarefa 3",
+  "title": "Tarefa 2",
   "completed": false,
   "updated_at": "2022-08-28T02:50:23.000000Z",
   "created_at": "2022-08-28T02:50:23.000000Z",
-  "id": 13,
+  "id": 2,
   "message": "Tarefa criada com sucesso!",
-  "httpCode": 202
 }
 ```
 
@@ -168,13 +172,14 @@ $ php artisan serve
 
 "Retorno"
 {
-  "id": 1,
-  "title": "Tarefa Update",
-  "completed": false,
-  "created_at": "2022-08-27T23:56:39.000000Z",
-  "updated_at": "2022-08-28T02:55:26.000000Z",
-  "message": "Tarefa atualizada com sucesso com sucesso!",
-  "httpCode": 202
+ "data": {
+    "id": 1,
+    "title": "Tarefa Update",
+    "completed": false,
+    "created_at": "2022-08-28T23:44:58.000000Z",
+    "updated_at": "2022-08-30T18:47:21.000000Z"
+  },
+ "message": "Tarefa atualizada com sucesso !"
 }
 
 ```
@@ -189,13 +194,14 @@ $ php artisan serve
 
 "Retorno"
 {
-  "id": 1,
-  "title": "Tarefa Update",
-  "completed": true,
-  "created_at": "2022-08-27T23:56:39.000000Z",
-  "updated_at": "2022-08-28T02:55:26.000000Z",
-  "message": "Tarefa atualizada com sucesso com sucesso!",
-  "httpCode": 202
+ "data": {
+    "id": 1,
+    "title": "Tarefa Update",
+    "completed": true,
+    "created_at": "2022-08-28T23:44:58.000000Z",
+    "updated_at": "2022-08-30T18:47:21.000000Z"
+  },
+ "message": "Tarefa atualizada com sucesso !"
 }
 ```
 
@@ -204,13 +210,14 @@ $ php artisan serve
 ```json
 "Retorno"
 {
-  "id": 9,
-  "title": "Tarefa Update",
-  "completed": 1,
-  "created_at": "2022-08-27T23:56:39.000000Z",
-  "updated_at": "2022-08-28T02:58:41.000000Z",
-  "message": "Tarefa deletada com sucesso!",
-  "httpCode": 202
+ "data": {
+    "id": 2,
+    "title": "Tarefa 2s",
+    "completed": false,
+    "created_at": "2022-08-28T23:44:58.000000Z",
+    "updated_at": "2022-08-30T18:47:21.000000Z"
+  },
+ "message": "Tarefa deletada com sucesso !"
 }
 ```
 
@@ -222,6 +229,6 @@ $ php artisan serve
 [![codepen](https://img.shields.io/badge/codepen-111?style=for-the-badge&logo=codepen&logoColor=white)](https://codepen.io/BiahDev)
 [![linkedin](https://img.shields.io/badge/linkedin-111?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/biahdev)
 [![twitter](https://img.shields.io/badge/twitter-111?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/BiahDev)
-<a href="mailto:bia8717@hotmail.com">
-  <img src="https://img.shields.io/badge/Email-111?style=for-the-badge&logo=gmail&logoColor=white" />
-</a>
+`<a href="mailto:bia8717@hotmail.com">`
+  `<img src="https://img.shields.io/badge/Email-111?style=for-the-badge&logo=gmail&logoColor=white" />`
+`</a>`

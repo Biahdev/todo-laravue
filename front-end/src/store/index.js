@@ -42,7 +42,7 @@ export default createStore({
         .then(response => commit('storeTodo', response.data.data))
     },
     updateTodo({ commit }, { id, data }) {
-      return axios.put(`http://127.0.0.1:8000/api/task/${id}`, data)
+      return axios.put(`http://127.0.0.1:8000/api/task/title/${id}`, data)
         .then((response) => {
           commit('storeTodo', response.data.data)
         })

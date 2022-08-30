@@ -23,7 +23,7 @@ class TaskController extends Controller
     try {
       $task = Task::create([
         'title' => $request['title'],
-        'completed' => false,
+        'completed' => false
       ]);
       return $this->messageJson("Tarefa criada com sucesso!", 202,$task);
     }
@@ -92,8 +92,7 @@ class TaskController extends Controller
   public function messageJson($message, $httpCode, $obj = false)
   {
     if (!$obj) {
-      $array = ['message' => $message, 'httpCode' => $httpCode];
-      return response()->json($array);
+      return response()->json(['message' => $message],$httpCode);
     }
     return response()->json([
       'data'=> $obj,
